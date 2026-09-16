@@ -1,5 +1,7 @@
-from app import app
+"""Legacy compatibility module.
 
-@app.route("/")
-def home():
-    return "Temple Visitor Home Page"
+This project registers all Flask routes in app.py to avoid route duplication
+when the application is imported in different ways.
+"""
+
+from app import app  # noqa: F401
